@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KuwaitCodes.iml" filepath="$PROJECT_DIR$/KuwaitCodes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KuwaitCodes.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KuwaitCodes.app.iml" />
+    </modules>
+  </component>
+</project>

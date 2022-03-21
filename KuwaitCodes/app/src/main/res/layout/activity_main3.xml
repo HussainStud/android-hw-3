@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <View
+        android:id="@+id/viewTop3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#F1F2F7"
+        />
+    <ImageView
+        android:id="@+id/referenceImageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/web"
+        android:scaleType="center"
+        android:layout_below="@+id/viewTop3"
+        />
+
+    <TextView
+        android:id="@+id/titleTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/referenceImageView2"
+        android:layout_marginTop="10dp"
+        android:text="@string/web"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/cairo_semibold"
+        />
+
+    <TextView
+        android:id="@+id/descriptionTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@+id/titleTextView2"
+        android:text="@string/webDescription"
+        android:textSize="18sp"
+        android:fontFamily="@font/cairo_regular"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="112dp"
+        android:layout_height="66dp"
+
+        android:layout_below="@id/descriptionTextView2"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/cairo_black"
+        android:text="سجل"
+        android:textColor="@color/colorAccent"
+        android:textSize="26sp" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

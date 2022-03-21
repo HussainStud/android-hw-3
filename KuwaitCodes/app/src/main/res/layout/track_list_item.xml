@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="end"
+    android:background="#F1F2F3"
+    >
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:text="تطوير مواقع الإنترنت"
+        android:textSize="20sp"
+        android:fontFamily="@font/cairo_semibold"
+        android:textColor="#444"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/referenceImageView"
+        android:layout_width="180dp"
+        android:layout_height="160dp"
+        android:src="@drawable/web"
+        android:layout_marginBottom="10dp"
+        />
+    <View
+        android:layout_width="7dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>
