@@ -4,50 +4,43 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.example.kuwaitcodes.Model.Tracks;
 import com.example.kuwaitcodes.R;
 
+import org.w3c.dom.Text;
+
 import java.net.ProtocolFamily;
 import java.util.ArrayList;
+import java.util.List;
 
-public class TracksListAdapter extends BaseAdapter {
+public class TracksListAdapter extends ArrayAdapter<Tracks> {
+    List<Tracks> trackList;
+    public TracksListAdapter(@NonNull Context context, int resource, @NonNull List<Tracks> objects) {
+        super(context, resource, objects);
 
-    ArrayList<Tracks> dataList;
-    Context context;
-
-    public TracksListAdapter(ArrayList<Tracks> list, Context context) {
-        dataList = list;
-        this.context = context;
+        this.trackList = objects;
     }
 
+    @NonNull
     @Override
-    public int getCount() {
-        return dataList.size();
-    }
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        Tracks currentTrack = trackList.get(position);
 
-    @Override
-    public Object getItem(int position) {
-        return dataList.get(position);
-    }
+        convertView = LayoutInflater.from(getContext()).inflate(R.layout.track_list_item, parent, false);
 
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
+        TextView trackNameTextView = convertView.findViewById(R.id.titleTextView);
+        ImageView trackImageView = convertView.findViewById(R.id.referenceImageView);
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.track_list_item, parent, false);
-        ImageView imageView = rowView.findViewById(R.id.referenceImageView);
-        TextView textView = rowView.findViewById(R.id.titleTextView);
+        trackNameTextView.setText(currentTrack.getTrackName());
+        trackImageView.setImageResource(currentTrack.getTrackImage());
 
-        imageView.setImageResource(dataList.get(position).getImageReference());
-        textView.setText(dataList.get(position).getTitle());
-        return rowView;
+        return convertView;
     }
 }

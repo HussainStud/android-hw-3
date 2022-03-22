@@ -15,58 +15,41 @@ import java.util.ArrayList;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    ArrayList<Tracks> list = new ArrayList<>();
-    TracksListAdapter listAdapter = new TracksListAdapter(list, MainActivity2.this);
-
-    ArrayList<Integer> imagesArrayList = new ArrayList<>();
-    ArrayList<String> descriptionArrayList = new ArrayList<>();
-    ArrayList<String> titlesArrayList = new ArrayList<>();
-
-
+    ArrayList<Tracks> tracks = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        ListView listView = findViewById(R.id.tracksListView);
+        ListView tracksList = findViewById(R.id.tracksListView);
 
+        Tracks androidTrack = new Tracks(getString(R.string.android), getString(R.string.androidDescription), "", R.drawable.android);
+        Tracks iOSTrack = new Tracks(getString(R.string.iphone), getString(R.string.iphoneDescription), "", R.drawable.iphone);
+        Tracks webTrack = new Tracks(getString(R.string.web), getString(R.string.webDescription), "", R.drawable.web);
+        Tracks gameDevTrack = new Tracks(getString(R.string.android), getString(R.string.androidDescription), "", R.drawable.android);
 
-        Tracks track1 = new Tracks(getString(R.string.web), getString(R.string.webDescription), R.drawable.web);
-        list.add(track1);
-        Tracks track2 = new Tracks(getString(R.string.android), getString(R.string.androidDescription), R.drawable.android);
-        list.add(track2);
-        Tracks track3 = new Tracks(getString(R.string.iphone), getString(R.string.iphoneDescription), R.drawable.iphone);
-        list.add(track3);
-        listView.setAdapter(listAdapter);
+        tracks.add(androidTrack);
+        tracks.add(iOSTrack);
+        tracks.add(webTrack);
+        tracks.add(gameDevTrack);
 
-        imagesArrayList.add(R.drawable.web);
-        imagesArrayList.add(R.drawable.android);
-        imagesArrayList.add(R.drawable.iphone);
+        TracksListAdapter tracksListAdapter = new TracksListAdapter(this, 0, tracks);
+        tracksList.setAdapter(tracksListAdapter);
 
-        descriptionArrayList.add(getString(R.string.webDescription));
-        descriptionArrayList.add(getString(R.string.androidDescription));
-        descriptionArrayList.add(getString(R.string.iphoneDescription));
-
-        titlesArrayList.add(getString(R.string.web));
-        titlesArrayList.add(getString(R.string.android));
-        titlesArrayList.add(getString(R.string.iphone));
-
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        tracksList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent trackDetailsPage = new Intent(MainActivity2.this, MainActivity3.class);
+                Tracks currentTrack = tracks.get(position);
 
-                intent.putExtra("imageResource", imagesArrayList.get(position));
-                intent.putExtra("description", descriptionArrayList.get(position));
-                intent.putExtra("title", titlesArrayList.get(position));
+                trackDetailsPage.putExtra("TRACKNAME", currentTrack.getTrackName());
+                trackDetailsPage.putExtra("TRACKDESCRIPTION", currentTrack.getTrackDescription());
+                trackDetailsPage.putExtra("TRACKIMAGE", currentTrack.getTrackImage());
+                trackDetailsPage.putExtra("TRACKURLVIDEO", currentTrack.getTrackURLVideo());
 
-
-
-                startActivity(intent);
+                startActivity(trackDetailsPage);
             }
         });
-
     }
 }

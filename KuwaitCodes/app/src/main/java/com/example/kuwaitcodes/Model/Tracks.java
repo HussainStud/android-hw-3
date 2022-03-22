@@ -1,26 +1,47 @@
 package com.example.kuwaitcodes.Model;
 
 public class Tracks {
-    private String title;
-    private String description;
-    private int imageReference;
+    private String trackName;
+    private String trackDescription;
+    private String trackURLVideo;
+    private int trackImage;
 
-
-    public Tracks(String title, String description, int imageReference) {
-        this.title = title;
-        this.description = description;
-        this.imageReference = imageReference;
+    public Tracks(String trackName, String trackDescription, String trackURLVideo, int trackImage) {
+        this.trackName = trackName;
+        this.trackDescription = trackDescription;
+        this.trackURLVideo = trackURLVideo;
+        this.trackImage = trackImage;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTrackName() {
+        return trackName;
     }
 
-    public String getDescription() {
-        return description;
+    public void setTrackName(String trackName) {
+        this.trackName = trackName;
     }
 
-    public int getImageReference() {
-        return imageReference;
+    public String getTrackDescription() {
+        return trackDescription;
+    }
+
+    public void setTrackDescription(String trackDescription) {
+        this.trackDescription = trackDescription;
+    }
+
+    public String getTrackURLVideo() {
+        return trackURLVideo;
+    }
+
+    public void setTrackURLVideo(String trackURLVideo) {
+        this.trackURLVideo = trackURLVideo;
+    }
+
+    public int getTrackImage() {
+        return trackImage;
+    }
+
+    public void setTrackImage(int trackImage) {
+        this.trackImage = trackImage;
     }
 }
