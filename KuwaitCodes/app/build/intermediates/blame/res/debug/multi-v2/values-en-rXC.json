@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Java\\KuwaitCodes\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rXC\\values-en-rXC.xml",
+            "outputFile": "C:\\Users\\hussian\\Documents\\ClassWorks\\Homework3\\android-hw-3\\KuwaitCodes\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rXC\\values-en-rXC.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hussian\\.gradle\\caches\\transforms-2\\files-2.1\\e9dab9c67c1ee3668e0bbf86c6d8cbd8\\core-1.1.0\\res\\values-en-rXC\\values-en-rXC.xml",

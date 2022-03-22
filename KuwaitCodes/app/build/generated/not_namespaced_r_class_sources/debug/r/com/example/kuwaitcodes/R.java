@@ -3638,24 +3638,25 @@ public final class R {
     public static final int btn_radio_off_to_on_mtrl_animation=0x7f07005d;
     public static final int btn_radio_on_mtrl=0x7f07005e;
     public static final int btn_radio_on_to_off_mtrl_animation=0x7f07005f;
-    public static final int iphone=0x7f070060;
-    public static final int kuwait_codes=0x7f070061;
-    public static final int kuwait_codes_icon=0x7f070062;
-    public static final int notification_action_background=0x7f070063;
-    public static final int notification_bg=0x7f070064;
-    public static final int notification_bg_low=0x7f070065;
-    public static final int notification_bg_low_normal=0x7f070066;
-    public static final int notification_bg_low_pressed=0x7f070067;
-    public static final int notification_bg_normal=0x7f070068;
-    public static final int notification_bg_normal_pressed=0x7f070069;
-    public static final int notification_icon_background=0x7f07006a;
-    public static final int notification_template_icon_bg=0x7f07006b;
-    public static final int notification_template_icon_low_bg=0x7f07006c;
-    public static final int notification_tile_bg=0x7f07006d;
-    public static final int notify_panel_notification_icon_bg=0x7f07006e;
-    public static final int tooltip_frame_dark=0x7f07006f;
-    public static final int tooltip_frame_light=0x7f070070;
-    public static final int web=0x7f070071;
+    public static final int game_dev=0x7f070060;
+    public static final int iphone=0x7f070061;
+    public static final int kuwait_codes=0x7f070062;
+    public static final int kuwait_codes_icon=0x7f070063;
+    public static final int notification_action_background=0x7f070064;
+    public static final int notification_bg=0x7f070065;
+    public static final int notification_bg_low=0x7f070066;
+    public static final int notification_bg_low_normal=0x7f070067;
+    public static final int notification_bg_low_pressed=0x7f070068;
+    public static final int notification_bg_normal=0x7f070069;
+    public static final int notification_bg_normal_pressed=0x7f07006a;
+    public static final int notification_icon_background=0x7f07006b;
+    public static final int notification_template_icon_bg=0x7f07006c;
+    public static final int notification_template_icon_low_bg=0x7f07006d;
+    public static final int notification_tile_bg=0x7f07006e;
+    public static final int notify_panel_notification_icon_bg=0x7f07006f;
+    public static final int tooltip_frame_dark=0x7f070070;
+    public static final int tooltip_frame_light=0x7f070071;
+    public static final int web=0x7f070072;
   }
   public static final class font {
     public static final int cairo_black=0x7f080000;
@@ -3969,13 +3970,15 @@ public final class R {
     public static final int android=0x7f0e001b;
     public static final int androidDescription=0x7f0e001c;
     public static final int app_name=0x7f0e001d;
-    public static final int iphone=0x7f0e001e;
-    public static final int iphoneDescription=0x7f0e001f;
-    public static final int programDescription=0x7f0e0020;
-    public static final int search_menu_title=0x7f0e0021;
-    public static final int status_bar_notification_info_overflow=0x7f0e0022;
-    public static final int web=0x7f0e0023;
-    public static final int webDescription=0x7f0e0024;
+    public static final int gameDev=0x7f0e001e;
+    public static final int gameDevDescription=0x7f0e001f;
+    public static final int iphone=0x7f0e0020;
+    public static final int iphoneDescription=0x7f0e0021;
+    public static final int programDescription=0x7f0e0022;
+    public static final int search_menu_title=0x7f0e0023;
+    public static final int status_bar_notification_info_overflow=0x7f0e0024;
+    public static final int web=0x7f0e0025;
+    public static final int webDescription=0x7f0e0026;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0f0000;

@@ -27,7 +27,7 @@ public class MainActivity2 extends AppCompatActivity {
         Tracks androidTrack = new Tracks(getString(R.string.android), getString(R.string.androidDescription), "", R.drawable.android);
         Tracks iOSTrack = new Tracks(getString(R.string.iphone), getString(R.string.iphoneDescription), "", R.drawable.iphone);
         Tracks webTrack = new Tracks(getString(R.string.web), getString(R.string.webDescription), "", R.drawable.web);
-        Tracks gameDevTrack = new Tracks(getString(R.string.android), getString(R.string.androidDescription), "", R.drawable.android);
+        Tracks gameDevTrack = new Tracks(getString(R.string.gameDev), getString(R.string.gameDevDescription), "", R.drawable.game_dev);
 
         tracks.add(androidTrack);
         tracks.add(iOSTrack);
